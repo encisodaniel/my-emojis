@@ -1,97 +1,61 @@
+html {
+    height: 100vh;
+    font-family: Baloo;
+}
+
 body {
-    margin: 0;
+    padding: 10px;
+    background-image: linear-gradient(#5DA4D9, #FFF);
+}
+
+#emoji-container {
+    margin: 40px;
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    
 }
 
-#container {
-    width: 550px;
-    height: 729px;
-    background: #1F2937;
-    margin: 0 auto;
+#emoji-container span {
+    margin: 10px;
+    font-size: 60px;
 }
 
-header {
-    background: #6943FF;
-    padding: 34px 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#push-btn,#unshift-btn {
+    background-color: #80D87F;
+}
+
+#shift-btn,#pop-btn {
+    background-color: #E23349;
 }
 
 h1 {
-   font-size: 28px;
-    line-height: 38px;
-    letter-spacing: -0.03em;
-    margin-top: 0px;
-}
-
-#input-el {
-    border: 2px solid #B295FF;
-    border-radius: 5px;
-    width: 117px;
-    height: 83px;
-    background: #6943FF;
-    font-weight: 800;
-    font-size: 58px;
-    line-height: 24px;
-    color: white;
+    letter-spacing: 2px;
     text-align: center;
-    font-family: 'Inter';
+    color: white;
 }
 
-#convert-btn {
-    width: 117px;
-    height: 42px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
+input {
+    margin: 0 auto;
+    display: block;
     border: none;
-    font-family: 'Inter';
-    font-size: 16px;
-    line-height: 24px;
-    color: #3D3D3D;
-    margin-top: 25px;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-#conv-container {
-    padding-top: 15px;
-    margin: 36px 25px;
-    
-}
-
-#conv-container div {
-    width: 500px;
-    height: 108.57px;
-    background: #273549;
-    border-radius: 4.68077px 0px 0px 0px;
-    margin-bottom: 23px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-h3 {
-    font-size: 20px;
-    line-height: 20px;
+    height: 30px;
+    background: white;
+    border-radius: 6px;
     text-align: center;
-    color: #CCC1FF;
-    margin: 0;
-    font-weight: 400;
 }
 
-p {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+button {
+    font-family: Baloo;
+    letter-spacing: px;
+    background: darkcyan;
     color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin: 0 4px;
 }
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 40px;
+}
+

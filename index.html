@@ -1,32 +1,20 @@
 <html>
     <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="container">
-            <header>
-                <h1>Metric/Imperial Unit Conversion</h1>
-                <input type="text" id="input-el" placeholder="0"/>
-                <button id="convert-btn">Convert</button>
-            </header>
-            <div id="conv-container">
-                <div>
-                    <h3>Length (Meter/ Feet)</h3>
-                    <p id="length">...</p>
-                </div>     
-                
-                <div>
-                    <h3>Volume (Liters/Gallons)
-                    <p id="volume">...</p>
-                </div>
-                
-                <div>
-                    <h3>Mass (Kilograms/Pounds)</h3>
-                    <p id="mass">...</p>
-                </div>
-            </div>
+        <h1>My Emojis</h1>   
+        <div id="emoji-container"></div>
+        <input type="text" id="emoji-input" placeholder="type an emoji 🎉">
+        <div class="buttons-wrapper">
+            <button id="push-btn">Add to end</button>
+            <button id="unshift-btn">Add to beginning</button>
         </div>
-        <script src="index.js"></script>
+        <div class="buttons-wrapper">
+            <button id="pop-btn">Remove from end</button>
+            <button id="shift-btn">Remove from beginning</button>
+        </div>
+        <script src="index.pack.js"></script>
     </body>
 </html>

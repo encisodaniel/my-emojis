@@ -1,25 +1,45 @@
-/*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
-*/
-const inputEl = document.getElementById("input-el")
-const convertBtn = document.getElementById("convert-btn")
-const length = document.getElementById("length")
-const volume = document.getElementById("volume")
-const mass = document.getElementById("mass")
+const myEmojis = ["👨‍💻", "⛷", "🍲"]
 
-
-function render() {
-         let num = inputEl.value * 1;
-    length.textContent = `${num} meters = ${(num * 3.281).toFixed(3)} feet | ${num} feet = ${(num / 3.281).toFixed(3)}` 
-    
-    volume.textContent = `${num} liter = ${(num * 0.264).toFixed(3)} gallons| ${num} gallons = ${(num / 0.264).toFixed(3)}`
-    
-    mass.textContent =  `${num} kilos = ${(num * 2.204).toFixed(3)} pound | ${num} feet = ${(num / 2.204).toFixed(3)}`   
-    
-    console.log(typeof num)
-
+function renderEmojis() {
+    const emojiContainer = document.getElementById("emoji-container")
+    emojiContainer.innerHTML = ""
+    for (let i = 0; i < myEmojis.length; i++) {
+        const emoji = document.createElement('span')
+        emoji.textContent = myEmojis[i]
+        emojiContainer.append(emoji)
+    }
 }
 
-convertBtn.addEventListener("click", render)
+renderEmojis()
+
+const pushBtn = document.getElementById("push-btn")
+pushBtn.addEventListener("click", function(){
+    const emojiInput = document.getElementById("emoji-input")
+    if (emojiInput.value) {
+        myEmojis.push(emojiInput.value)
+        emojiInput.value = ""
+        renderEmojis()
+    }
+})
+
+const unshiftBtn = document.getElementById("unshift-btn")
+unshiftBtn.addEventListener("click", function(){
+    const emojiInput = document.getElementById("emoji-input")
+    if (emojiInput.value) {
+        myEmojis.unshift(emojiInput.value)
+        emojiInput.value = ""
+        renderEmojis()
+    }
+})
+
+const popBtn = document.getElementById("pop-btn")
+popBtn.addEventListener("click", function(){
+    myEmojis.pop()
+    renderEmojis()
+})
+
+const shiftBtn = document.getElementById("shift-btn")
+shiftBtn.addEventListener("click", function(){
+    myEmojis.shift()
+    renderEmojis()
+})
